@@ -1,0 +1,71 @@
+/* PizzaStyles.css */
+
+.Pizza {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    border: 2px solid #e6e6e6;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.Pizza img {
+    max-width: 100px;
+    border-radius: 8px;
+    margin-right: 16px;
+}
+
+.descripcion {
+    flex: 1;
+}
+
+.descripcion p {
+    margin: 0;
+}
+
+.descripcion b {
+    color: #e44d26; /* Pizza-themed color */
+}
+
+/* Price styles */
+.descripcion p:last-child {
+    margin-top: 8px;
+}
+
+/* Simple and extra price styles */
+.descripcion p span {
+    font-weight: bold;
+    color: #4caf50; /* Green color for simplicity */
+}
+
+.descripcion p br {
+    display: none; /* Hide line break on larger screens */
+}
+
+
+/* Button styles */
+.anadir {
+    background-color: #e44d26; /* Button background color */
+    color: #fff; /* Button text color */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.anadir:hover {
+    background-color: #4caf50; /* Button background color on hover */
+}
+
+
+@media (max-width: 600px) {
+    /* Show line break on smaller screens */
+    .descripcion p br {
+        display: inline;
+    }
+}
+
