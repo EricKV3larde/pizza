@@ -20,6 +20,7 @@ export const Carro = () =>{
                     if(cartItems[pizza.id] !== 0 ){
                         return <CartItem data={pizza}/>
                     }
+                    return null;
                 })}
 
             </div>

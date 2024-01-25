@@ -2,11 +2,11 @@ import React, {useContext} from  "react";
 import {ShopContext} from "../../context/shop-context"
 import "./carroitem.css";
 export const CartItem = (props) => {
-    const { id, pizzaName, descripcion, fotoPizza, precios } = props.data;
+    const { id, pizzaName, fotoPizza, precios } = props.data;
     const {addItems, cartItems, removeItems, actualizarCarrito} = useContext(ShopContext);
     return ( 
         <div className="carroItem">
-            <img src={fotoPizza} />
+            <img src={fotoPizza} alt=""/>
             <div className="descripcion">
                 <p>
                     {" "}
