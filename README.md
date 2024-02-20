@@ -1,16 +1,11 @@
 # Tienda para Pizzería 🍕
 
-![Pizza](https://img.icons8.com/dusk/64/000000/pizza.png)
-
-Este proyecto es una aplicación web diseñada para facilitar el proceso de pedidos de pizzas en línea.
+Este proyecto es frontend web diseñado y pensado para facilitar el proceso de pedidos de pizzas en línea.
 
 ## Características 🚀
 
 - Navegación intuitiva del menú de pizzas con opciones de personalización de ingredientes.
 - Carrito de compras que muestra un resumen de los pedidos seleccionados.
-- Proceso de pago seguro y fácil, con opciones para ingreso de datos de tarjeta de crédito o pago en efectivo a la entrega.
-- Confirmación de pedidos con detalles de la orden y tiempo estimado de entrega.
-- Opción para registro de cuentas de usuario para un proceso de pedido más rápido en futuras visitas.
 
 ## Tecnologías Utilizadas 💻
 
@@ -30,4 +25,4 @@ Este proyecto es una aplicación web diseñada para facilitar el proceso de pedi
 
 ---
 
-Hecho con ❤️ por [Tu Nombre](https://github.com/tunombre).
+Hecho con ❤️ por [Tu Nombre](https://github.com/ErickV3larde).
