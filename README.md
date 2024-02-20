@@ -25,4 +25,4 @@ Este proyecto es frontend web diseñado y pensado para facilitar el proceso de p
 
 ---
 
-Hecho con ❤️ por [Tu Nombre](https://github.com/ErickV3larde).
+Hecho con ❤️ por [Erick Velarde](https://github.com/ErickV3larde).
