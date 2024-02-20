@@ -39,7 +39,7 @@
 }
 
 .contador button {
-  
+  background-color: var(--blanco);
   cursor: pointer;
   font-size: 16px;
   padding: 10px 15px;
