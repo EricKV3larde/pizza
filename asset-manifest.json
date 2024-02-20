@@ -1,16 +1,22 @@
 {
   "files": {
-    "main.css": "/tienda-pizza/static/css/main.5c990ae0.css",
-    "main.js": "/tienda-pizza/static/js/main.12f37977.js",
+    "main.css": "/tienda-pizza/static/css/main.2b2d68ba.css",
+    "main.js": "/tienda-pizza/static/js/main.8024c6d3.js",
     "static/js/496.50d1cdd7.chunk.js": "/tienda-pizza/static/js/496.50d1cdd7.chunk.js",
+    "static/media/pizza.gif": "/tienda-pizza/static/media/pizza.7025d3aca31c8524b1ad.gif",
+    "static/media/logo.png": "/tienda-pizza/static/media/logo.8280ed05e164dac1540e.png",
+    "static/media/promoJueves.png": "/tienda-pizza/static/media/promoJueves.4e5aba6e3294f010eedb.png",
+    "static/media/promoMartes.png": "/tienda-pizza/static/media/promoMartes.0c3644441d364d81b5b8.png",
     "static/media/americana.png": "/tienda-pizza/static/media/americana.2081a17aa7ade2038c9b.png",
+    "static/media/fondo-error.png": "/tienda-pizza/static/media/fondo-error.f6a366b9f5dc288f0429.png",
+    "static/media/horno.png": "/tienda-pizza/static/media/horno.fa639cc2b31221462256.png",
     "index.html": "/tienda-pizza/index.html",
-    "main.5c990ae0.css.map": "/tienda-pizza/static/css/main.5c990ae0.css.map",
-    "main.12f37977.js.map": "/tienda-pizza/static/js/main.12f37977.js.map",
+    "main.2b2d68ba.css.map": "/tienda-pizza/static/css/main.2b2d68ba.css.map",
+    "main.8024c6d3.js.map": "/tienda-pizza/static/js/main.8024c6d3.js.map",
     "496.50d1cdd7.chunk.js.map": "/tienda-pizza/static/js/496.50d1cdd7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5c990ae0.css",
-    "static/js/main.12f37977.js"
+    "static/css/main.2b2d68ba.css",
+    "static/js/main.8024c6d3.js"
   ]
 }
