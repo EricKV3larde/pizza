@@ -3,8 +3,8 @@ import americana from './assets/americana.png'
 export const PIZZAS = [
     {
         id: 1,
-        pizzaName: "americana",
-        descripcion: "Jamon y queso",
+        pizzaName: "Americana",
+        descripcion: "Jamón y Mozarella.",
         fotoPizza: americana,
         precios: {
             simple: 20,
@@ -13,8 +13,8 @@ export const PIZZAS = [
     },
     {
         id: 2,
-        pizzaName: "margarita",
-        descripcion: "Salsa de tomate, mozzarella y albahaca",
+        pizzaName: "Hawaiana",
+        descripcion: "Jamón, Piña y Mozarella.",
         fotoPizza: americana,
         precios: {
             simple: 20,
@@ -23,8 +23,8 @@ export const PIZZAS = [
     },
     {
         id: 3,
-        pizzaName: "vegetariana",
-        descripcion: "Pimientos, champiñones, cebolla y aceitunas",
+        pizzaName: "Chorizo ahumado",
+        descripcion: "Chorizo ahumado y Mozarella.",
         fotoPizza: americana,
         precios: {
             simple: 20,
@@ -33,8 +33,8 @@ export const PIZZAS = [
     },
     {
         id: 4,
-        pizzaName: "hawaiana",
-        descripcion: "Jamón, piña y queso",
+        pizzaName: "Vegetariana",
+        descripcion: "Aceitunas verdes, Champiñones, Puerro, Pimentón y Mozarella.",
         fotoPizza: americana,
         precios: {
             simple: 20,
@@ -43,12 +43,32 @@ export const PIZZAS = [
     },
     {
         id: 5,
-        pizzaName: "barbacoa",
-        descripcion: "Carne de res, cebolla, salsa barbacoa y queso",
+        pizzaName: "Pepperoni",
+        descripcion: "Pepperoni y Mozarella.",
         fotoPizza: americana,
         precios: {
             simple: 20,
             extra: 25,
+        },
+    },
+    {
+        id: 6,
+        pizzaName: "Continental",
+        descripcion: "Jamon, Chorizo ahumado, champiñones, puerro y Mozarella.",
+        fotoPizza: americana,
+        precios: {
+            simple: 20,
+            extra: 25,
+        },
+    },
+    {
+        id: 7,
+        pizzaName: "Suprema",
+        descripcion: "Jamon, Chorizo ahumado, Pepperoni, Champiñones, Aceituna verde, Pimentón, Puerro y Mozarella.",
+        fotoPizza: americana,
+        precios: {
+            simple: 30,
+            extra: 35,
         },
     },
 ];

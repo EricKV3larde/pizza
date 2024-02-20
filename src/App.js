@@ -3,7 +3,9 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Navbar } from './components/navbar';
 import { Carro } from './pages/carro/carro';
 import { Tienda } from './pages/tienda/tienda';
+import { Login } from './pages/login/login.jsx'
 import { ShopContextProvider } from './context/shop-context';
+import { Slide } from './pages/promos/slide.jsx';
 
 function App() {
   return (
@@ -15,7 +17,9 @@ function App() {
         <Routes>
           {/*aqui iran nuestras distintas paginas, tambien estamos llamando a los componentes */}
           <Route path="/" element={<Tienda />} />
+          <Route path="/Slide" element={<Slide />} />
           <Route path="/carro" element={<Carro />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
       </Router>
       </ShopContextProvider>

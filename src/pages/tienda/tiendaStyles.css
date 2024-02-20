@@ -1,0 +1,18 @@
+.tiposPizzas {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Esto hará que las columnas sean responsivas */
+    gap: 2rem; /* Agrega espacio entre las pizzas */
+    margin: 5rem auto; /* Centra el contenedor horizontalmente */
+    max-width: 1200px; /* Establece un ancho máximo para el contenedor */
+ /* Agrega un poco de relleno a los lados */
+}
+
+.titulo{
+  margin-top: 2vh;
+}
+
+.titulo h1{
+  font-size: 3vh;
+}
+
+

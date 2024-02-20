@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto&family=Satisfy&display=swap');
+:root {
+  --negro: rgb(38, 37, 35);
+  --rosado: rgb(239, 180, 179);
+  --piel: rgb(242, 202, 167);
+  --verde: #C1D2B1;
+  --verdeOscuro: rgb(153, 169, 139);
+  --marron: rgb(167, 94, 53);
+  --blanco: rgb(242, 242, 242);
+}

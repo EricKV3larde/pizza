@@ -14,11 +14,12 @@ export const CartItem = (props) => {
                 </p>
 
                 <p>S/ {precios.simple}</p>
-                <div className="contador">
-                    <button onClick={() => removeItems(id)}> - </button>
+            </div>
+
+            <div className="contador">
+                    <button className="btn-quitar" onClick={() => removeItems(id)}> - </button>
                     <input value={cartItems[id]} onChange={(e)=> actualizarCarrito(Number(e.target.value),id)} />
-                    <button onClick={() => addItems(id)}> + </button>
-                </div>
+                    <button className="btn-anadir" onClick={() => addItems(id)}> + </button>
             </div>
            
         </div>

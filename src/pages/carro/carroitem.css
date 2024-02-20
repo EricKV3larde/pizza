@@ -1,12 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto&family=Satisfy&display=swap');
+@import '../variables.css';
 /* carroitem.css */
 
 .carroItem {
   display: flex;
   align-items: center;
   padding: 10px;
-  border: 1px solid #ccc;
+  border-top: 1px solid #ccc;
   margin-bottom: 10px;
-  background-color: #f8f8f8;
+  background-color: var(--blanco);
 }
 
 .carroItem img {
@@ -24,36 +26,55 @@
 }
 
 .descripcion p b {
-  color: #e44d26; /* Color rojo, típico de la salsa de tomate */
+  color: var(--negro);
+  font-size: 2.5vh;
 }
 
-.precios {
-  color: #1e7e34; /* Color verde, típico de las verduras en la pizza */
-}
+
 
 .contador {
   display: flex;
   align-items: center;
-  margin-top: 10px;
+  padding: 1rem;
 }
 
 .contador button {
-  background-color: #f8f8f8;
-  border: 1px solid #ccc;
-  color: #333;
+  
   cursor: pointer;
   font-size: 16px;
-  padding: 5px 10px;
+  padding: 10px 15px;
+  border-radius: 50%;
+}
+
+.btn-quitar{
+  border:2px solid var(--rosado);
+  color: var(--rosado);
+}
+.btn-anadir{
+  border:2px solid var(--verde);
+  color: var(--verde);
+}
+.btn-quitar:hover{
+  background-color: var(--rosado);
+  color: var(--blanco);
+}
+.btn-anadir:hover{
+  background-color: var(--verde);
+  color: var(--blanco);
 }
 
 .contador input {
-  width: 40px;
+  width: 25px;
+  background-color: var(--blanco);
   text-align: center;
   font-size: 14px;
-  margin: 0 10px;
-  border: 1px solid #ccc;
+  margin: 0 5px;
+  border: none;
   padding: 5px;
   outline: none;
+  font-family: sans-serif;
+  font-size: large;
+  font-weight:200
 }
 
 /* Puedes ajustar estos estilos según tus preferencias y diseño específico */

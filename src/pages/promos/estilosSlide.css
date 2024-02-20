@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto&family=Satisfy&display=swap');
+@import '../variables.css';
+
+ul,
+li {
+  list-style: none;
+  white-space: nowrap;
+}
+
+li {
+  display: inline;
+}
+
+img {
+  margin-top: -16px;
+}
+
+/* Main container */
+
+.main-container {
+  width: 700px;
+  height: 300px;
+  margin: 25vh auto;
+}
+
+/* Slider container */
+.slider-container {
+  position: relative;
+  height: 100%
+}
+
+/* dots carrusel */
+.dots-container {
+  display: flex;
+  justify-content: center;
+}
+
+.dot-container-item {
+  margin: 8px 3px;
+  cursor: pointer;
+  font-size: 12px;
+  text-align: center;
+}
+
+/* Arrows */
+.leftArrow{
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  left: 32px;
+  font-size: 50px;
+  font-weight: 700;
+  color: var(--negro);
+  z-index: 1;
+  cursor: pointer;
+}
+
+.rightArrow {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  right: 32px;
+  font-size: 50px;
+  font-weight: 700;
+  color: var(--negro);
+  z-index: 1;
+  cursor: pointer;
+}
+
+.container-images {  
+    padding-top: 1rem;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  border: 1px solid var(--negro);
+  overflow: hidden;
+}
+
+div.active {
+  background: var(--piel);
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+
+
+@media screen and (max-width: 768px) {
+  .main-container {
+    width: 70vw;
+    height: 40vw;
+    margin: 25vh auto;
+  }
+  .imgs-promos{
+    width: 70vw;
+    height: 46vw;
+    margin-top: -20px;
+  }
+}

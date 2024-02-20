@@ -1,64 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto&family=Satisfy&display=swap');
+@import '../variables.css';
+
 /* PizzaStyles.css */
 
 .Pizza {
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: space-between;
     padding: 16px;
-    border: 2px solid #e6e6e6;
+    border: 2px solid var(--piel);
     border-radius: 8px;
     margin-bottom: 16px;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .Pizza img {
-    max-width: 100px;
-    border-radius: 8px;
-    margin-right: 16px;
+    max-width: 20vh;
 }
 
-.descripcion {
-    flex: 1;
+.descripcion{
+    text-align: left;
 }
+
 
 .descripcion p {
-    margin: 0;
+    font-size:medium;
+    font-weight: normal;
+    color: rgba(38, 37, 35, 0.464); /* Green color for simplicity */
 }
-
-.descripcion b {
-    color: #e44d26; /* Pizza-themed color */
-}
-
-/* Price styles */
-.descripcion p:last-child {
-    margin-top: 8px;
-}
-
 /* Simple and extra price styles */
 .descripcion p span {
+    font-size:medium;
     font-weight: bold;
-    color: #4caf50; /* Green color for simplicity */
+    color: var(--verde); /* Green color for simplicity */
 }
 
-.descripcion p br {
+#descripcion p br {
+
     display: none; /* Hide line break on larger screens */
 }
+/* boton selecto de tamaño styles  */
+.tamano-selector {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    margin: 0.5rem;
+    width: 80%;
+    background-color: rgb(239, 239, 239);
+    border-radius: 0.6rem;
+    
+}
 
+.btn-tamano {
+    flex: 1;
+    border: none;
+    cursor: pointer;
+    padding: 0.7rem;
+    margin: 0;
+    border-radius: 0.6rem;
+    text-align: center;
+}
+
+.btn-tamano.selected {
+    background-color: lightgray;
+}
+
+.btn-tamano:not(.selected) {
+    background-color: rgb(239, 239, 239);
+    color: gray;
+}
+
+.tamano-selector button{
+    font-size: 1rem;
+}
 
 /* Button styles */
+.costo-btn-container {
+    position: relative;
+    display: flex; /* Cambiado a flex para poder usar justify-content */
+    justify-content: space-around; /* Alinea los elementos al final del contenedor (derecha) */
+}
+
+
 .anadir {
-    background-color: #e44d26; /* Button background color */
-    color: #fff; /* Button text color */
+    background-color: var(--verde); /* Button background color */
+    color: var(--blanco); /* Button text color */
+    width: 60%;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
+    font-size:large;
 }
 
 .anadir:hover {
-    background-color: #4caf50; /* Button background color on hover */
+    background-color: var(--piel);
+    color: var(--negro); /* Button background color on hover */
 }
 
 
