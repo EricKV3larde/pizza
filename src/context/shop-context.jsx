@@ -1,61 +1,64 @@
-import React, {createContext, useState} from "react"
+import React, { createContext, useState, useEffect } from "react";
 import { PIZZAS } from "../pizzas";
 
 export const ShopContext = createContext(null);
 
-
-const getDefaultItems = () =>{
-    let cart = {}
-
-    for(let i=1 ; i<PIZZAS.length+1; i++) {
-        cart[i] = 0
-    }
-    return cart;
-
+const getDefaultItems = () => {
+  let cart = {};
+  for (let i = 1; i < PIZZAS.length + 1; i++) {
+    cart[i] = 0;
+  }
+  return cart;
 };
 
-// {
-//     1:0,
-//     2:0,
-//     3:0,
-//     4:0,
-//     5:0,
-//     6:0,
-//     7:0,
-//     8:0,
-// }
-
 export const ShopContextProvider = (props) => {
-    const [cartItems, setCartItems] = useState(getDefaultItems());
+  const [cartItems, setCartItems] = useState(getDefaultItems());
+  const [totalPrice, setTotalPrice] = useState(0);
 
-    // this new funtion is for add pizzas
+  useEffect(() => {
+    console.log("22 - TotalPrice-> ", totalPrice);
+  }, [totalPrice]);
 
-    const addItems = (itemId) =>{
-        setCartItems((prev) => ({...prev, [itemId]: prev[itemId]+ 1}));
-    };
+  const addItems = (itemId, precio) => {
+    setCartItems((prev) => ({
+      ...prev,
+      [itemId]: prev[itemId] + 1,
+    }));
+    setTotalPrice((prevPrice) => {
+      const newTotal = prevPrice + precio;
+      console.log("Nuevo precio actual:", precio);
+      console.log("Nuevo precio total shopprovider:", newTotal);
+      console.log("TotalPrice-> ", totalPrice);
+      return newTotal;
+    });
+  };
 
-    const removeItems = (itemId) =>{
-        setCartItems((prev) => ({...prev, [itemId]: prev[itemId]- 1}));
-    };
+  const removeItems = (itemId) => {
+    setCartItems((prev) => ({
+      ...prev,
+      [itemId]: prev[itemId] - 1,
+    }));
+  };
 
-    const actualizarCarrito = (newAmount, itemId) =>{
-        setCartItems((prev) => ({...prev, [itemId]: newAmount}));
-    };
+  const getTotal = () => {
+    let total = 0;
+    total += totalPrice;
+    console.log("Total FINAL -> ", totalPrice);
+    return total;
+  };
 
-    const getTotal = () => {
-        let total = 0;
-        for (const item in cartItems) {
-            if (cartItems[item]>0){
-                let itemInfo = PIZZAS.find((pizza) => pizza.id === Number(item));
-                total += cartItems[item]* itemInfo.precios.simple;
-            }
+  const contextValue = {
+    cartItems,
+    addItems,
+    removeItems,
+    getTotal,
+  };
 
-        };
-        return total;
-    };
+  console.log(cartItems);
 
-    const contextValue = {cartItems, addItems, removeItems, actualizarCarrito, getTotal};
-
-    console.log(cartItems);
-    return <ShopContext.Provider value={contextValue}>{props.children}</ShopContext.Provider>
+  return (
+    <ShopContext.Provider value={contextValue}>
+      {props.children}
+    </ShopContext.Provider>
+  );
 };

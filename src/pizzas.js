@@ -6,6 +6,7 @@ export const PIZZAS = [
         pizzaName: "Americana",
         descripcion: "Jamón y Mozarella.",
         fotoPizza: americana,
+        dobleQueso: false,
         precios: {
             simple: 20,
             extra: 25,
@@ -16,6 +17,7 @@ export const PIZZAS = [
         pizzaName: "Hawaiana",
         descripcion: "Jamón, Piña y Mozarella.",
         fotoPizza: americana,
+        dobleQueso: false,
         precios: {
             simple: 20,
             extra: 25,
@@ -26,6 +28,7 @@ export const PIZZAS = [
         pizzaName: "Chorizo ahumado",
         descripcion: "Chorizo ahumado y Mozarella.",
         fotoPizza: americana,
+        dobleQueso: false,
         precios: {
             simple: 20,
             extra: 25,
@@ -36,6 +39,7 @@ export const PIZZAS = [
         pizzaName: "Vegetariana",
         descripcion: "Aceitunas verdes, Champiñones, Puerro, Pimentón y Mozarella.",
         fotoPizza: americana,
+        dobleQueso: false,
         precios: {
             simple: 20,
             extra: 25,
@@ -46,6 +50,7 @@ export const PIZZAS = [
         pizzaName: "Pepperoni",
         descripcion: "Pepperoni y Mozarella.",
         fotoPizza: americana,
+        dobleQueso: false,
         precios: {
             simple: 20,
             extra: 25,
@@ -56,6 +61,7 @@ export const PIZZAS = [
         pizzaName: "Continental",
         descripcion: "Jamon, Chorizo ahumado, champiñones, puerro y Mozarella.",
         fotoPizza: americana,
+        dobleQueso: false,
         precios: {
             simple: 20,
             extra: 25,
@@ -66,6 +72,7 @@ export const PIZZAS = [
         pizzaName: "Suprema",
         descripcion: "Jamon, Chorizo ahumado, Pepperoni, Champiñones, Aceituna verde, Pimentón, Puerro y Mozarella.",
         fotoPizza: americana,
+        dobleQueso: false,
         precios: {
             simple: 30,
             extra: 35,

@@ -1,0 +1,47 @@
+
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    background-color: var(--negro);
+    padding: 20px; /* Agrega padding alrededor del contenedor */
+    box-sizing: border-box; /* Asegura que el padding se incluya en el tamaño total del contenedor */
+}
+.pizza{
+    color: var(--rosado);
+}
+.ppp{
+    font-size: medium;
+    font-family: sans-serif;
+}
+.header {
+    grid-column: 1 / 2;
+    text-align: left;
+    padding-left: .5vw;
+    color: var(--blanco);
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: var(--blanco);
+    border-radius: 20px;
+}
+
+.navbar1 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.footer {
+    grid-column: 1 / span 2;
+    background-color: var(--negro);
+    color: var(--blanco);
+    padding: 20px;
+    
+}
+.footer p{
+    font-size: .7vw;
+}
+

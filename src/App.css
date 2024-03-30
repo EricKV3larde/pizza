@@ -30,6 +30,9 @@
   color: #61dafb;
 }
 
+.footer {
+  flex-shrink: 0; /* Evita que el footer se contraiga si hay poco contenido */
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
