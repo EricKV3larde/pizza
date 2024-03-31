@@ -1,5 +1,6 @@
 import React from "react";
 import "./footerbar.css";
+
 export const FooterBar = () => {
   return (
     <div className="container">
@@ -16,15 +17,15 @@ export const FooterBar = () => {
       </div>
       <div className="content-grid">
         <div className="navbar1">
-          <a href="#">About Us</a>
+          {/* <a href="#">About Us</a>
           <a href="#">Portfolio</a>
           <a href="#">Contact Us</a>
-          <a href="#">Contact Us</a>
+          <a href="#">Contact Us</a> */}
         </div>
         <div className="navbar1">
-          <a href="#">Our FAQ</a>
+          {/* <a href="#">Our FAQ</a>
           <a href="#">Our Team</a>
-          <a href="#">Our Service</a>
+          <a href="#">Our Service</a> */}
         </div>
       </div>
 

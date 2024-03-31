@@ -1,5 +1,5 @@
 import "./App.css";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import { Navbar } from "./components/navbar";
 import { FooterBar } from "./components/footerbar.jsx";
 import { Carro } from "./pages/carro/carro";
@@ -17,7 +17,7 @@ function App() {
           {/*o ponemos aqui para mostrarlo en todas las rutas, globalmente  */}
           <Routes>
             {/*aqui iran nuestras distintas paginas, tambien estamos llamando a los componentes */}
-            <Route path="/" element={<Tienda />} />
+            <Route path="/" element={<Tienda/>} />
             <Route path="/Slide" element={<Slide />} />
             <Route path="/carro" element={<Carro />} />
             <Route path="/login" element={<Login />} />

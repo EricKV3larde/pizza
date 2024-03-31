@@ -92,3 +92,68 @@ body {
   margin-top: 5vh;
   height: 10vh;
 }
+
+/* ----------------------------- */
+.formulario-flotante {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%; /* Ancho del formulario */
+  max-width: 400px; /* Ancho máximo */
+  height: 50%; /* Altura del formulario */
+  max-height: 500px; /* Altura máxima */
+  background-color: var(--blanco); /* Color de fondo del formulario */
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(17, 16, 16, 0.2); /* Sombra para dar efecto de flotación */
+  z-index: 1000; /* Asegura que el formulario esté por encima de otros elementos */
+}
+
+
+
+.formulario-pago h2 {
+  margin-bottom: 10px;
+}
+
+.formulario-pago label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.formulario-pago input,
+.formulario-pago select,
+.formulario-pago button {
+  width: 80%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid var(--blanco);
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.formulario-pago button {
+  background-color: var(--verde); /* Color de fondo del botón */
+  color: var(--blanco); /* Color del texto del botón */
+  border: none;
+  cursor: pointer;
+}
+
+.formulario-pago button:hover {
+  background-color: var(--verdeOscuro); /* Cambia el color de fondo al pasar el mouse sobre el botón */
+}
+/* ----------  */
+.billetes-monedas-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Divide en 4 columnas de igual tamaño */
+  grid-gap: 5px; /* Espacio entre los elementos */
+}
+
+.billetes-monedas-container label {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.billetes-monedas-container input {
+  margin-right: 5px;
+}
