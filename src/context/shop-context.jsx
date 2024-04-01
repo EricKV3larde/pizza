@@ -16,7 +16,6 @@ export const ShopContextProvider = (props) => {
   const [totalPrice, setTotalPrice] = useState(0);
 
   useEffect(() => {
-    console.log("22 - TotalPrice-> ", totalPrice);
   }, [totalPrice]);
 
   const addItems = (itemId, precio) => {
@@ -26,9 +25,9 @@ export const ShopContextProvider = (props) => {
     }));
     setTotalPrice((prevPrice) => {
       const newTotal = prevPrice + precio;
-      console.log("Nuevo precio actual:", precio);
-      console.log("Nuevo precio total shopprovider:", newTotal);
-      console.log("TotalPrice-> ", totalPrice);
+      // console.log("Nuevo precio actual:", precio);
+      // console.log("Nuevo precio total shopprovider:", newTotal);
+      // console.log("TotalPrice-> ", totalPrice);
       return newTotal;
     });
   };
@@ -43,7 +42,7 @@ export const ShopContextProvider = (props) => {
   const getTotal = () => {
     let total = 0;
     total += totalPrice;
-    console.log("Total FINAL -> ", totalPrice);
+    // console.log("Total FINAL -> ", totalPrice);
     return total;
   };
 
@@ -54,7 +53,7 @@ export const ShopContextProvider = (props) => {
     getTotal,
   };
 
-  console.log(cartItems);
+  // console.log(cartItems);
 
   return (
     <ShopContext.Provider value={contextValue}>

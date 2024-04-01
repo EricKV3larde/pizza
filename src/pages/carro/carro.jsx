@@ -5,6 +5,7 @@ import { CartItem } from "./carroitem";
 import "./carro.css";
 import horno from "../../assets/horno.png";
 import vpizza from "../../assets/pizza.gif";
+import { enviar } from "./main";
 
 export const Carro = () => {
   const { cartItems, getTotal } = useContext(ShopContext);
@@ -13,37 +14,33 @@ export const Carro = () => {
   const [telefono, setTelefono] = useState("");
   const [ubicacion, setUbicacion] = useState("");
   const [metodoPago, setMetodoPago] = useState("yape");
-  const [billetesMonedas, setBilletesMonedas] = useState([]);
   const totalFinal = getTotal();
 
   const handlePagarClick = () => {
     setMostrarFormulario(true);
   };
 
+
   const handleEnviarFormulario = (event) => {
     event.preventDefault();
     // Validar campos antes de enviar el formulario
     if (!nombre || !telefono || !ubicacion) {
-      alert("Por favor completa todos los campos.");
+      console.log("Por favor completa todos los campos.");
       return;
     }
-    const datosFormulario = {
-      nombre,
-      telefono,
-      ubicacion,
-      metodoPago,
-      billetesMonedas,
-    };
-    console.log(datosFormulario);
-  };
+    // Crear el pedido con el detalle de las pizzas y el total
+    const pedido = PIZZAS.filter((pizza) => cartItems[pizza.id] !== 0)
+    .map((pizza) => {
+      const cantidad = cartItems[pizza.id];
+      const tipoPrecio = pizza.dobleQueso ? 'extra' : 'simple'; // Determinar el tipo de precio
+      
+      return `${pizza.pizzaName} (${tipoPrecio}): ${cantidad}`;
+    })
+    .join("\n");
+    
+    const mensajePedido = `Pedido:\n${pedido}\nTotal: S/ ${totalFinal}`;
 
-  const handleBilletesMonedasChange = (event) => {
-    const { value } = event.target;
-    if (billetesMonedas.includes(value)) {
-      setBilletesMonedas(billetesMonedas.filter((item) => item !== value));
-    } else {
-      setBilletesMonedas([...billetesMonedas, value]);
-    }
+    enviar(nombre, telefono, ubicacion, metodoPago, mensajePedido);
   };
 
   return (
@@ -124,37 +121,9 @@ export const Carro = () => {
               <option value="plin">Plin</option>
               <option value="efectivo">Efectivo</option>
             </select>
-            <label htmlFor="billetesMonedas">Billetes/Monedas:</label>
-            <div className="billetes-monedas-container">
-              <label>
-                <input
-                  type="checkbox"
-                  value="1"
-                  checked={billetesMonedas.includes("1")}
-                  onChange={handleBilletesMonedasChange}
-                />
-                1
-              </label>
-              <label>
-                <input
-                  type="checkbox"
-                  value="2"
-                  checked={billetesMonedas.includes("2")}
-                  onChange={handleBilletesMonedasChange}
-                />
-                2
-              </label>
-              <label>
-                <input
-                  type="checkbox"
-                  value="5"
-                  checked={billetesMonedas.includes("5")}
-                  onChange={handleBilletesMonedasChange}
-                />
-                5
-              </label>
-            </div>
-            <button type="submit">Enviar</button>
+            <button type="submit">
+              Enviar
+            </button>
           </form>
         </div>
       )}
