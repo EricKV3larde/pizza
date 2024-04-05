@@ -8,7 +8,7 @@ import vpizza from "../../assets/pizza.gif";
 import { enviar } from "./main";
 
 export const Carro = () => {
-  const { cartItems, getTotal } = useContext(ShopContext);
+  const { cartItems, getTotal, orderItems } = useContext(ShopContext);
   const [mostrarFormulario, setMostrarFormulario] = useState(false);
   const [nombre, setNombre] = useState("");
   const [telefono, setTelefono] = useState("");
@@ -20,7 +20,6 @@ export const Carro = () => {
     setMostrarFormulario(true);
   };
 
-
   const handleEnviarFormulario = (event) => {
     event.preventDefault();
     // Validar campos antes de enviar el formulario
@@ -29,18 +28,33 @@ export const Carro = () => {
       return;
     }
     // Crear el pedido con el detalle de las pizzas y el total
-    const pedido = PIZZAS.filter((pizza) => cartItems[pizza.id] !== 0)
-    .map((pizza) => {
-      const cantidad = cartItems[pizza.id];
-      const tipoPrecio = pizza.dobleQueso ? 'extra' : 'simple'; // Determinar el tipo de precio
-      
-      return `${pizza.pizzaName} (${tipoPrecio}): ${cantidad}`;
-    })
-    .join("\n");
-    
-    const mensajePedido = `Pedido:\n${pedido}\nTotal: S/ ${totalFinal}`;
+    // const pedido = PIZZAS.filter((pizza) => cartItems[pizza.id] !== 0)
+    //   .map((pizza) => {
+    //     const cantidad = cartItems[pizza.id];
+    //     const tipoPrecio = pizza.dobleQueso ? "extra" : "simple"; // Determinar el tipo de precio
+    //     return `${pizza.pizzaName} (${tipoPrecio}): ${cantidad}`;
+    //   })
+    //   .join("\n");
 
-    enviar(nombre, telefono, ubicacion, metodoPago, mensajePedido);
+    // const mensajePedido = `Pedido:\n${pedido}\nTotal: S/ ${totalFinal}`;
+    const orderSummary = orderItems.reduce((summary, item) => {
+      const existingItem = summary.find((summaryItem) => summaryItem.pizzaName === item.pizzaName && summaryItem.type === item.type);
+      if (existingItem) {
+        existingItem.quantity += item.quantity;
+      } else {
+        summary.push({ pizzaName: item.pizzaName, type: item.type, quantity: item.quantity });
+      }
+      return summary;
+    }, []);
+    
+    const formattedOrder = orderSummary.map((item) => {
+      const typeName = item.type ? "doble" : "simple";
+      return `${item.pizzaName} ${typeName} -> (${item.quantity})`;
+    });
+    
+    console.log(formattedOrder);
+
+    enviar(nombre, telefono, ubicacion, metodoPago, formattedOrder, totalFinal);
   };
 
   return (
@@ -121,9 +135,7 @@ export const Carro = () => {
               <option value="plin">Plin</option>
               <option value="efectivo">Efectivo</option>
             </select>
-            <button type="submit">
-              Enviar
-            </button>
+            <button type="submit">Enviar</button>
           </form>
         </div>
       )}

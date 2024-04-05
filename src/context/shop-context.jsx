@@ -12,17 +12,18 @@ const getDefaultItems = () => {
 };
 
 export const ShopContextProvider = (props) => {
-  const [cartItems, setCartItems] = useState(getDefaultItems());
+  const [cartItems, setCartItems, ] = useState(getDefaultItems());
   const [totalPrice, setTotalPrice] = useState(0);
+  const [orderItems, setOrderItems] = useState([]);
 
-  useEffect(() => {
-  }, [totalPrice]);
+  useEffect(() => {}, [totalPrice]);
 
   const addItems = (itemId, precio) => {
     setCartItems((prev) => ({
       ...prev,
       [itemId]: prev[itemId] + 1,
     }));
+
     setTotalPrice((prevPrice) => {
       const newTotal = prevPrice + precio;
       // console.log("Nuevo precio actual:", precio);
@@ -39,6 +40,16 @@ export const ShopContextProvider = (props) => {
     }));
   };
 
+  const addToOrder = (pizzaName, quantity, type) => {
+    setOrderItems((prevOrder) => [
+      ...prevOrder,
+      { pizzaName, quantity, type }, // Agregar un objeto con información sobre la pizza seleccionada
+    ]);
+  };
+  useEffect(() => {
+    console.log(orderItems); // Esto se ejecutará cada vez que orderItems cambie
+  }, [orderItems]);
+
   const getTotal = () => {
     let total = 0;
     total += totalPrice;
@@ -51,6 +62,8 @@ export const ShopContextProvider = (props) => {
     addItems,
     removeItems,
     getTotal,
+    orderItems,
+    addToOrder,
   };
 
   // console.log(cartItems);
